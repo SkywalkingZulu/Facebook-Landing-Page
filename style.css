@@ -104,8 +104,11 @@ td
 }
 .bgsubcontainer
 {
-    margin-left:141.667px;
-    margin-right:141.667px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    max-width:980px;
+    height:598px;
 }
 .description
 {
@@ -126,7 +129,15 @@ img
 {
     margin-right: 15px;
     width: 565px;
+    height:inherit;
     float:left;
+}
+.right-container
+{
+    display: block;
+    position: relative;
+    width: 406.333;
+    height:inherit;
 }
 .acc_create
 {
@@ -201,7 +212,12 @@ img
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 10px;
+    
+}
+.header_wrapper
+{
     width:377px;
+    margin-bottom: 5px;
 }
 .rdobtn_label
 {
@@ -211,3 +227,135 @@ img
     line-height: 18px;
     padding: 0 10px 0 3px;
 }
+#days,#months,#years
+{
+    font-size: 13px;
+    height: 30px;
+    padding: 5px;
+}
+.gender_container,.birthday_container
+{
+    margin-top: 10px;
+    display:block;
+    font-family: inherit;
+    width: inherit;
+    float:left;
+    position: relative;
+}
+.form_paragraph_container
+{
+    color: #777;
+    font-size: 11px;
+    width: 316px;
+    float:left;
+}
+.form_paragraph_container p span{
+    color: #385898;
+    cursor: pointer;
+}
+.form_paragraph_container p span:hover{
+    text-decoration: underline;
+}
+#celeb_pages span{
+    color: #385898;
+    cursor: pointer;
+}
+#celeb_pages span:hover{
+    text-decoration: underline;
+}
+.regbtn
+{
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: normal;
+    font-size: 19px;
+    min-width: 194px;
+    padding: 7px 20px;
+    text-align: center;
+    background: linear-gradient(#67ae55, #578843);
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #3b6e22 #3b6e22 #2c5115;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#celeb_pages
+{
+    border-top: 1px solid #dddfe2;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+.footer{
+    color: #737373;
+    margin-left: 141.667px;
+    margin-right:141.667px;
+    margin-top:30px;
+    max-width: 980px;
+    display:block;
+    background:#fff;
+    
+}
+.language{
+    list-style-type: none;
+    text-align: left;
+    width:inherit;
+    padding-left:0;
+}
+.footer ul a
+{
+    text-decoration: none;
+    white-space: nowrap;
+    color:#385898;
+    cursor: pointer;
+}
+.footer .language li{
+    float:left;
+    margin-right:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#contentCurve{
+    border-bottom: 1px solid #dddfe2;
+    font-size: 1px;
+    height: 8px;
+    margin-top:8px;
+    margin-bottom: 8px;
+    display:block;
+}
+.footer .language{
+    list-style-type: none;
+    padding-left: 0;
+    /* display:inline-block; */
+}
+.footer .related li{
+    color: #385898;
+    cursor: pointer;
+    padding-right:18px;
+    margin-bottom:0;
+    line-height: 1.6;
+    float:left;
+
+}
+.footer .related{
+    list-style-type: none;
+    padding-left: 0;
+    display:inline-block;
+
+}
+.footer ul li:hover{
+    text-decoration: underline;
+}
+#copyright{
+    display: block;
+    font-size: 11px;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+
+

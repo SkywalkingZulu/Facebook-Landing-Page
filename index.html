@@ -3,6 +3,7 @@
     <head>
         <title>Facebook - login or sign up</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="images/62591-logo-computer-facebook-icons-free-png-hq_32x32.ico">
     </head>
     <body>
         <div class="loggedout_menubar_container">
@@ -67,24 +68,142 @@
                         <input type="text" placeholder="Surname" name="firstname" id="surname">
                         <input type="text" placeholder="Mobile number or email address" name="contact" id="contact">
                         <input type="password" placeholder="New password" name="pwd" id="pwd">
-                        <label for="birthday" class="bgheader">Birthday
-                            <input type="date" name="birthday" id="birthday">
-                        </label>                     
-                        <label for="gender" class="bgheader">Gender
-                            <input type="radio"name="female" name="female" id="female">
+                        <div class="birthday_container">
+                            <div class="header_wrapper"><label class="bgheader">Birthday</label></div>
+                            <select name="days" id="days"> 
+                                <option value="Day">Day</option> 
+                                <option value="1">1</option> 
+                                <option value="2">2</option> 
+                                <option value="3">3</option> 
+                                <option value="4">4</option> 
+                                <option value="5">5</option> 
+                                <option value="6">6</option> 
+                                <option value="7">7</option> 
+                                <option value="8">8</option> 
+                                <option value="9">9</option> 
+                                <option value="10">10</option> 
+                                <option value="11">11</option> 
+                                <option value="12">12</option> 
+                                <option value="13">13</option> 
+                                <option value="14">14</option> 
+                                <option value="15">15</option> 
+                                <option value="16">16</option> 
+                                <option value="17">17</option> 
+                                <option value="18">18</option> 
+                                <option value="19">19</option> 
+                                <option value="20">20</option> 
+                                <option value="21">21</option> 
+                                <option value="22">22</option> 
+                                <option value="23">23</option> 
+                                <option value="24">24</option> 
+                                <option value="25" selected>25</option> 
+                                <option value="26">26</option> 
+                                <option value="27">27</option> 
+                                <option value="28">28</option> 
+                                <option value="29">29</option>
+                                <option value="30">30</option> 
+                                <option value="31">31</option>   
+                            </select>  
+                        <select id="months">
+                            <option value="Month">Month</option>
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun" selected>Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sep">Sep</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                        </select>
+                        <select id="years">
+                            <option value="Year">Year</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008" selected>2008</option>
+                        </select>
+                        </div>
+                        <div class="gender_container">
+                            <div class="header_wrapper"><label for="gender" class="bgheader">Gender</label></div>                                    
+                            <input type="radio" name="gender" id="female">
                             <label for="female" class="rdobtn_label">Female</label>
-                            <input type="radio"name="male" id="male">
+                            <input type="radio" name="gender" id="male">
                             <label for="male" class="rdobtn_label">Male</label>
-                            <input type="radio"name="custom" id="custom">
+                            <input type="radio"name="gender" id="custom">
                             <label for="custom" class="rdobtn_label">Custom</label>
-                        </label>
-                        
+                        </div>
+                        <div class="form_paragraph_container">
+                            <p>By clicking Sign Up, you agree to our <span>Terms,</span> <span>Data Policy</span> and <span>Cookie Policy.</span> You may receive SMS notifications from us and can opt out at any time.</p>
+                        </div>
+                        <button type="submit" class="regbtn">Sign Up</button>
+                        <div id ="celeb_pages"><span>Create a Page</span> for a celebrity, band or business.</div>
                     </form>
-                    
-                    
                 </div>
             </div>
         </div>
-        
+        <div class="footer">
+            <ul class="language">
+                <li>English(UK)</li>
+                <li><a href="https://bn-in.facebook.com/">বাংলা</a></li>
+                <li><a href="https://hi-in.facebook.com/">हिन्दी</a></li>
+                <li><a href="https://ur-pk.facebook.com/">اردو</a></li>
+                <li><a href="https://ne-np.facebook.com/">नेपाली</a></li>
+                <li><a href="https://or-in.facebook.com/">ଓଡ଼ିଆ</a></li>
+                <li><a href="https://es-la.facebook.com/">Español</a></li>
+                <li><a href="https://pt-br.facebook.com/">Português (Brasil)</a></li>
+                <li><a href="https://fr-fr.facebook.com/">Français (France)</a></li>
+                <li><a href="https://de-de.facebook.com/">Deutsch</a></li>
+                <li><a href="https://it-it.facebook.com/">Italiano</a></li>
+            </ul>
+            <br/>
+            <div id="contentCurve"></div>
+            <ul class="related">
+                <li>Sign Up</li>
+                <li>Log In</li>
+                <li>Messenger</li>
+                <li>Facebook Lite</li>
+                <li>Watch</li>    
+                <li>People</li>
+                <li>Pages</li>
+                <li>Page categories</li>
+                <li>Places</li>
+                <li>Games</li>
+                <li>Locations</li>
+                <li>Marketplace</li>
+                <li>Facebook Pay</li>
+                <li>Groups</li>
+                <li>Oculus</li>
+                <li>Portal</li>
+                <li>Instagram</li>
+                <li>Local</li>
+                <li>Fundraisers</li>
+                <li>Services</li>
+                <li>About</li>
+                <li>Create ad</li>
+                <li>Create Page</li>
+                <li>Developers</li>
+                <li>Careers</li>
+                <li>Privacy</li>
+                <li>Cookies</li>
+                <li>AdChoices</li>
+                <li>Terms</li>
+                <li>Help</li>
+                <li>Settings</li>
+            </ul>
+            <span id="copyright">Facebook © 2020</span>
+        </div>
     </body>
 </html>
