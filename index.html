@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook - login or sign up</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="loggedout_menubar_container">
+            <div class="loggedout_menubar">
+                <div class="header">
+                    <div class="logo">
+                        <a href="index.html" id="homepage_redirect"><h1>facebook</h1></a>
+                    </div>
+                    <div id="login_container">
+                        <form id="loginform" action="https://www.facebook.com/login/device-based/regular/login/?login_attempt=1&amp;lwv=110">
+                            <table cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="login" class="loginlabel">Email or phone</label>
+                                        </td>
+                                        <td>
+                                            <label for="password" class="loginlabel">Password</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" name="login" id="login" >
+                                        </td>
+                                        <td>
+                                            <input type="password" name="password" id="password">
+                                        </td>
+                                        <td>
+                                            <label id="loginbutton">
+                                                <input value="Log In" aria-label="Log In" type="submit" id="loginbtn">
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="hidden" autocomplete="off">
+                                        </td>
+                                        <td>
+                                            <a href="https://www.facebook.com/recover/initiate?lwv=110&ars=royal_blue_bar" id="forgot">Forgotten account?</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>           
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="bgcontainer">
+            <div class="bgsubcontainer">
+                <div class="left-container">
+                    <div class="description">Facebook helps you to connect and share with the people in your life.</div>
+                    <img src="images/fb.png" description="social network"/>
+                </div>
+                <div class="right-container">
+                    <div class="acc_create">
+                        <span>Create an account</span>
+                    </div>
+                    <div class="acc_create_desc">It's quick and easy.</div>
+                    <form class="regform" action="https://m.facebook.com/reg/">
+                        <input type="text" placeholder="First name" name="firstname" id="firstname">
+                        <input type="text" placeholder="Surname" name="firstname" id="surname">
+                        <input type="text" placeholder="Mobile number or email address" name="contact" id="contact">
+                        <input type="password" placeholder="New password" name="pwd" id="pwd">
+                        <label for="birthday" class="bgheader">Birthday
+                            <input type="date" name="birthday" id="birthday">
+                        </label>                     
+                        <label for="gender" class="bgheader">Gender
+                            <input type="radio"name="female" name="female" id="female">
+                            <label for="female" class="rdobtn_label">Female</label>
+                            <input type="radio"name="male" id="male">
+                            <label for="male" class="rdobtn_label">Male</label>
+                            <input type="radio"name="custom" id="custom">
+                            <label for="custom" class="rdobtn_label">Custom</label>
+                        </label>
+                        
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
