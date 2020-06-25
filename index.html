@@ -4,7 +4,7 @@
         <title>Facebook - login or sign up</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="icon" href="images/iconfinder_square-facebook_317727.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     </head>
     <body>
         <div class="loggedout_menubar_container">
@@ -55,6 +55,12 @@
         </div>
         <div class="bgcontainer">
             <div class="bgsubcontainer">
+                <div class="mobContentContainer">
+                    <form class="mobLoginForm" action="">
+                        <input type="text" placeholder="Mobile number or email address" id="mlogin">
+                        <input type="password" placeholder="Password" id="mpass">
+                    </form>
+                </div>
                 <div class="left-container">
                     <div class="description">Facebook helps you to connect and share with the people in your life.</div>
                     <img src="images/fb.png" description="social network"/>
@@ -105,37 +111,39 @@
                                 <option value="30">30</option> 
                                 <option value="31">31</option>   
                             </select>  
-                        <select id="months">
-                            <option value="Month">Month</option>
-                            <option value="Jan">Jan</option>
-                            <option value="Feb">Feb</option>
-                            <option value="Mar">Mar</option>
-                            <option value="Apr">Apr</option>
-                            <option value="May">May</option>
-                            <option value="Jun" selected>Jun</option>
-                            <option value="Jul">Jul</option>
-                            <option value="Aug">Aug</option>
-                            <option value="Sep">Sep</option>
-                            <option value="Oct">Oct</option>
-                            <option value="Nov">Nov</option>
-                            <option value="Dec">Dec</option>
-                        </select>
-                        <select id="years">
-                            <option value="Year">Year</option>
-                            <option value="2020">2020</option>
-                            <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                            <option value="2013">2013</option>
-                            <option value="2012">2012</option>
-                            <option value="2011">2011</option>
-                            <option value="2010">2010</option>
-                            <option value="2009">2009</option>
-                            <option value="2008" selected>2008</option>
-                        </select>
+                                <select id="months">
+                                <option value="Month">Month</option>
+                                <option value="Jan">Jan</option>
+                                <option value="Feb">Feb</option>
+                                <option value="Mar">Mar</option>
+                                <option value="Apr">Apr</option>
+                                <option value="May">May</option>
+                                <option value="Jun" selected>Jun</option>
+                                <option value="Jul">Jul</option>
+                                <option value="Aug">Aug</option>
+                                <option value="Sep">Sep</option>
+                                <option value="Oct">Oct</option>
+                                <option value="Nov">Nov</option>
+                                <option value="Dec">Dec</option>
+                            </select>
+                            <select id="years">
+                                <option value="Year">Year</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="2014">2014</option>
+                                <option value="2013">2013</option>
+                                <option value="2012">2012</option>
+                                <option value="2011">2011</option>
+                                <option value="2010">2010</option>
+                                <option value="2009">2009</option>
+                                <option value="2008" selected>2008</option>
+                            </select>
+                            <img src="images/iconfinder-icon.svg" id="questionmark">
+                        
                         </div>
                         <div class="gender_container">
                             <div class="header_wrapper"><label for="gender" class="bgheader">Gender</label></div>                                    
@@ -145,6 +153,7 @@
                             <label for="male" class="rdobtn_label">Male</label>
                             <input type="radio"name="gender" id="custom">
                             <label for="custom" class="rdobtn_label">Custom</label>
+                            <img src="images/iconfinder-icon.svg" id="questionmark">
                         </div>
                         <div class="form_paragraph_container">
                             <p>By clicking Sign Up, you agree to our <span>Terms,</span> <span>Data Policy</span> and <span>Cookie Policy.</span> You may receive SMS notifications from us and can opt out at any time.</p>
