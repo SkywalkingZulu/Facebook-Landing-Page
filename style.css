@@ -104,10 +104,10 @@ td
 }
 .bgsubcontainer
 {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:141.667px;
+    margin-right:141.667px;
     display:block;
-    max-width:980px;
+    min-width:inherit;
     height:598px;
 }
 .description
