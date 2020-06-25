@@ -55,8 +55,9 @@ body{
 }
 .loggedout_menubar
 {
-    margin-left: 141.667px;
-    margin-right: 141.667px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
     padding-top:13px;
     display:block;
 }
@@ -96,18 +97,19 @@ td
 }
 .bgcontainer
 {
-    /* background-color: #d3d8e8; */
     background: linear-gradient(white, #D3D8E8);
-    min-width:980px;
     display:block;
     height:598px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 980px; */
 }
 .bgsubcontainer
 {
-    margin-left:141.667px;
-    margin-right:141.667px;
+    margin-left: auto;
+    margin-right: auto;
     display:block;
-    min-width:inherit;
+    max-width:980px;
     height:598px;
 }
 .description
@@ -293,19 +295,29 @@ img
 }
 .footer{
     color: #737373;
-    margin-left: 141.667px;
-    margin-right:141.667px;
+    margin-left: auto;
+    margin-right:auto;  
+    max-width:980px;
     margin-top:30px;
-    max-width: 980px;
     display:block;
     background:#fff;
     
 }
+.footer-container{
+    max-width: 980px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
 .language{
     list-style-type: none;
     text-align: left;
-    width:inherit;
+    /* width:inherit; */
     padding-left:0;
+    max-width:inherit;
+    margin-left:auto;
+    margin-right:auto;
+
 }
 .footer ul a
 {
