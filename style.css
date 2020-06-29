@@ -1,12 +1,13 @@
+
 @media (min-width:997px){
-body{
-    font-family: Helvetica,Arial,sans-serif;
-    font-size: 12px;
-    border: 0px;
-    margin: 0px;
-    padding:0px;
-    line-height: 1.34;
-}
+    body{
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 12px;
+        border: 0px;
+        margin: 0px;
+        padding:0px;
+        line-height: 1.34;
+    }
 .loggedout_menubar_container
 {
     height:82px;
@@ -393,7 +394,7 @@ img
 {
     body{
         margin:0;
-        width:100%;
+        width:auto;
         padding:0;
     }
     .loggedout_menubar_container{
@@ -445,9 +446,10 @@ img
         font-size: 14px;
         line-height: 18px;
         margin: 0 auto;
-        width: 416px;
+        /* width: 416px; */
+        width:100%;
         height: 310px;
-        padding: 0 16px;
+        /*padding: 0 16px;  */
         font-family: Helvetica, Arial, sans-serif;
         /* border: 3px solid green; */
 
@@ -460,6 +462,7 @@ img
         margin-right:0px; */
         display: block;
         /* width:100%; */
+        padding:0 16px;
         
     }
     .mobContentContainer form input{
@@ -532,6 +535,8 @@ img
         overflow: hidden;
         text-align: center;
         white-space: nowrap;
+        /* padding-left:12px;
+        padding-right:12px; */
         /* border-top: 1px solid #ccd0d5;
         line-height: 1px; */
     }
