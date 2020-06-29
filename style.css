@@ -176,11 +176,14 @@ img
     font-size: 18px;
     padding: 8px 10px;
     border-radius: 5px;
-    border:1px solid #ccd0d5;
+    border:1px solid #bdc7d8;
     margin-right: 7px;
     background-color: #fff;
     color: #1c1e21;
     margin-bottom:10px;
+}
+#firstname::placeholder{
+    color:#9999A6;
 }
 #surname
 {
@@ -188,10 +191,13 @@ img
     font-size: 18px;
     padding: 8px 10px;
     border-radius: 5px;
-    border:1px solid #ccd0d5;
+    border:1px solid #bdc7d8;
     margin: 0px;
     background-color: #fff;
     color: #1c1e21;
+}
+#surname::placeholder{
+    color:#9999A6;
 }
 #contact
 {
@@ -199,10 +205,13 @@ img
     font-size: 18px;
     padding: 8px 10px;
     border-radius: 5px;
-    border:1px solid #ccd0d5;
+    border:1px solid #bdc7d8;
     background-color: #fff;
     color: #1c1e21;
     margin-bottom:10px;
+}
+#contact::placeholder{
+    color:#9999A6;
 }
 #pwd
 {
@@ -210,10 +219,13 @@ img
     font-size: 18px;
     padding: 8px 10px;
     border-radius: 5px;
-    border:1px solid #ccd0d5;
+    border:1px solid #bdc7d8;
     margin-bottom: 10px;
     background-color: #fff;
     color: #1c1e21;
+}
+#pwd::placeholder{
+    color:#9999A6;
 }
 .bgheader
 {
@@ -221,7 +233,7 @@ img
     color: #90949c;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
     
 }
@@ -243,11 +255,23 @@ img
     font-size: 13px;
     height: 30px;
     padding: 5px;
+    border: 1px solid #ccd0d5;
 }
-#questionmark {
+#questionmark1 {
         width: 16px;
         height: 16px;
         display: block;
+        position: relative;
+        left: 206px;
+        bottom: 29px;
+}
+#questionmark2 {
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    left: 288px;
+    bottom: 22px;
 }
 .gender_container,.birthday_container
 {
