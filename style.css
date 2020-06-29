@@ -608,12 +608,14 @@ img
         font-family: Helvetica, Arial, sans-serif;
         /* border: 3px solid green; */
         margin:0 auto;
+        overflow: auto;
     }
 
     .mobFooterContainer{
         padding:6px;
         display:block;
         font-size: 12px;
+        overflow:auto;
     }
     .mobFooterLeftContainer{
         width:40%;
@@ -639,11 +641,11 @@ img
     .mobFooterRightContainer ul{
         list-style-type: none;
     }
-    .eng{
-        color: #90949c;
+    .eng li{
+        color: #90949c !important;
         font-weight: bold;
     }
-    .more{
+    .more li{
         font-weight:bold;
         border:1px solid #576b95;
         border-radius:2px;
@@ -653,6 +655,14 @@ img
         height:15px;
         margin:0 auto;
         font-size:15px;
+        color: #90949c !important
+    }
+    .mobFooterText{
+        color: gray;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;
+        line-height: 15px;
     }
     #login_container {
         display: none;
