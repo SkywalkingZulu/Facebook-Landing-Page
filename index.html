@@ -251,17 +251,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-                $('#firstname').on('focus',function(){
+                $('#firstname').focus(function(){
                     if(($('#firstname').hasClass('.active'))==false){
                         $('#tooltiptext').addClass('.active').toggle();
-                    }else{
-                        $('#tooltiptext').removeClass('.active').toggle();
-                    }                 
-                })
-                $('#firstname').on('focusout',function(){
-                    if($('#firstname').hasClass('.active')){
-                        $('#tooltiptext').removeClass('.active').toggle();
-                    }                                     
+                    }          
                 })
                 $('#surname').on('focus',function(){
                     if(($('#surname').hasClass('.active'))==false){
@@ -283,6 +276,11 @@
                     }else{
                         $('#tooltiptext4').removeClass('.active').toggle();
                     }                 
+                })
+                $('body').click(function(){
+                    if($(this).children('#tooltiptext').hasClass('.active')){
+                        $('#tooltiptext').removeClass('.active').toggle();
+                    }
                 })
             });
         </script>
