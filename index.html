@@ -102,10 +102,10 @@
                     </div>
                     <div class="acc_create_desc">It's quick and easy.</div>
                     <form class="regform" action="https://m.facebook.com/reg/">
-                        <input type="text" placeholder="First name" name="firstname" id="firstname">
-                        <input type="text" placeholder="Surname" name="firstname" id="surname">
-                        <input type="text" placeholder="Mobile number or email address" name="contact" id="contact">
-                        <input type="password" placeholder="New password" name="pwd" id="pwd">
+                        <span class="tooltip" id="tooltiptext">What's your name?</span><input type="text" placeholder="First name" name="firstname" id="firstname">
+                        <input type="text" placeholder="Surname" name="firstname" id="surname"><span class="tooltip" id="tooltiptext2">What's your name?</span>
+                        <span class="tooltip" id="tooltiptext3">You'll use this when you log in and if you ever need to reset your password</span><input type="text" placeholder="Mobile number or email address" name="contact" id="contact">
+                        <span class="tooltip" id="tooltiptext4">Enter a combination of at least six numbers, letters and punctuation marks (such as ! and &).</span><input type="password" placeholder="New password" name="pwd" id="pwd">
                         <div class="birthday_container">
                             <div class="header_wrapper"><label class="bgheader">Date of birth</label></div>
                             <select name="days" id="days"> 
@@ -248,5 +248,43 @@
                 <span id="copyright">Facebook © 2020</span>
             </div>            
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#firstname').on('focus',function(){
+                    if(($('#firstname').hasClass('.active'))==false){
+                        $('#tooltiptext').addClass('.active').toggle();
+                    }else{
+                        $('#tooltiptext').removeClass('.active').toggle();
+                    }                 
+                })
+                $('#firstname').on('focusout',function(){
+                    if($('#firstname').hasClass('.active')){
+                        $('#tooltiptext').removeClass('.active').toggle();
+                    }                                     
+                })
+                $('#surname').on('focus',function(){
+                    if(($('#surname').hasClass('.active'))==false){
+                        $('#tooltiptext2').addClass('.active').toggle();
+                    }else{
+                        $('#tooltiptext2').removeClass('.active').toggle();
+                    }                 
+                })
+                $('#contact').on('focus',function(){
+                    if(($('#contact').hasClass('.active'))==false){
+                        $('#tooltiptext3').addClass('.active').toggle();
+                    }else{
+                        $('#tooltiptext3').removeClass('.active').toggle();
+                    }                 
+                })
+                $('#pwd').on('focus',function(){
+                    if(($('#pwd').hasClass('.active'))==false){
+                        $('#tooltiptext4').addClass('.active').toggle();
+                    }else{
+                        $('#tooltiptext4').removeClass('.active').toggle();
+                    }                 
+                })
+            });
+        </script>
     </body>
 </html>
