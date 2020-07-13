@@ -251,37 +251,46 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-                $('#firstname').focus(function(){
-                    if(($('#firstname').hasClass('.active'))==false){
+                $('.regform #firstname').focusin(function(){
+                    if(($('.regform #tooltiptext').hasClass('.active'))==false){
                         $('#tooltiptext').addClass('.active').toggle();
                     }          
-                })
-                $('#surname').on('focus',function(){
-                    if(($('#surname').hasClass('.active'))==false){
+                });
+                $('.regform #firstname').focusout(function(){
+                    if(($('.regform #tooltiptext').hasClass('.active'))==true){
+                        $('#tooltiptext').removeClass('.active').toggle();
+                    }          
+                });
+                $('.regform #surname').focusin(function(){
+                    if(($('.regform #tooltiptext2').hasClass('.active'))==false){
                         $('#tooltiptext2').addClass('.active').toggle();
-                    }else{
+                    }                
+                });
+                $('.regform #surname').focusout(function(){
+                    if(($('.regform #tooltiptext2').hasClass('.active'))==true){
                         $('#tooltiptext2').removeClass('.active').toggle();
                     }                 
-                })
-                $('#contact').on('focus',function(){
-                    if(($('#contact').hasClass('.active'))==false){
+                });
+                $('.regform #contact').focusin(function(){
+                    if(($('.regform #tooltiptext3').hasClass('.active'))==false){
                         $('#tooltiptext3').addClass('.active').toggle();
-                    }else{
+                    }               
+                });
+                $('#contact').focusout(function(){
+                    if(($('.regform #tooltiptext3').hasClass('.active'))==true){
                         $('#tooltiptext3').removeClass('.active').toggle();
-                    }                 
+                    }                    
                 })
-                $('#pwd').on('focus',function(){
-                    if(($('#pwd').hasClass('.active'))==false){
-                        $('#tooltiptext4').addClass('.active').toggle();
-                    }else{
-                        $('#tooltiptext4').removeClass('.active').toggle();
-                    }                 
-                })
-                $('body').click(function(){
-                    if($(this).children('#tooltiptext').hasClass('.active')){
-                        $('#tooltiptext').removeClass('.active').toggle();
-                    }
-                })
+                $('#pwd').focusin(function(){
+                    if(($('.regform #tooltiptext4').hasClass('.active'))==false){
+                        $('.regform #tooltiptext4').addClass('.active').toggle();
+                    }                
+                });
+                $('#pwd').focusout(function(){
+                    if(($('.regform #tooltiptext4').hasClass('.active'))==true){
+                        $('.regform #tooltiptext4').removeClass('.active').toggle();
+                    }                
+                });
             });
         </script>
     </body>
