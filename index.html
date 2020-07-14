@@ -101,9 +101,9 @@
                         <span>Create an account</span>
                     </div>
                     <div class="acc_create_desc">It's quick and easy.</div>
-                    <form class="regform" action="https://m.facebook.com/reg/">
+                    <form class="regform" action="https://m.facebook.com/reg/" onsubmit="return checkValid()">
                         <span class="tooltip" id="tooltiptext">What's your name?</span><input type="text" placeholder="First name" name="firstname" id="firstname">
-                        <input type="text" placeholder="Surname" name="firstname" id="surname"><span class="tooltip" id="tooltiptext2">What's your name?</span>
+                        <input type="text" placeholder="Surname" name="surname" id="surname"><span class="tooltip" id="tooltiptext2">What's your name?</span>
                         <span class="tooltip" id="tooltiptext3">You'll use this when you log in and if you ever need to reset your password</span><input type="text" placeholder="Mobile number or email address" name="contact" id="contact">
                         <span class="tooltip" id="tooltiptext4">Enter a combination of at least six numbers, letters and punctuation marks (such as ! and &).</span><input type="password" placeholder="New password" name="pwd" id="pwd">
                         <div class="birthday_container">
@@ -254,27 +254,30 @@
                 $('.regform #firstname').focusin(function(){
                     if(($('.regform #tooltiptext').hasClass('.active'))==false){
                         $('#tooltiptext').addClass('.active').toggle();
-                    }          
+                    } 
+                    $(this).removeClass('.warning').css("background","#fff");      
                 });
                 $('.regform #firstname').focusout(function(){
                     if(($('.regform #tooltiptext').hasClass('.active'))==true){
                         $('#tooltiptext').removeClass('.active').toggle();
-                    }          
+                    }       
                 });
                 $('.regform #surname').focusin(function(){
                     if(($('.regform #tooltiptext2').hasClass('.active'))==false){
                         $('#tooltiptext2').addClass('.active').toggle();
-                    }                
+                    }      
+                    $(this).css("background","#fff").removeClass('.warning');            
                 });
                 $('.regform #surname').focusout(function(){
                     if(($('.regform #tooltiptext2').hasClass('.active'))==true){
                         $('#tooltiptext2').removeClass('.active').toggle();
-                    }                 
+                    }             
                 });
                 $('.regform #contact').focusin(function(){
                     if(($('.regform #tooltiptext3').hasClass('.active'))==false){
                         $('#tooltiptext3').addClass('.active').toggle();
-                    }               
+                    }   
+                    $(this).css("background","#fff").removeClass('.warning');              
                 });
                 $('#contact').focusout(function(){
                     if(($('.regform #tooltiptext3').hasClass('.active'))==true){
@@ -284,13 +287,43 @@
                 $('#pwd').focusin(function(){
                     if(($('.regform #tooltiptext4').hasClass('.active'))==false){
                         $('.regform #tooltiptext4').addClass('.active').toggle();
-                    }                
+                    }    
+                    $(this).css("background","#fff").removeClass('.warning');              
                 });
                 $('#pwd').focusout(function(){
                     if(($('.regform #tooltiptext4').hasClass('.active'))==true){
                         $('.regform #tooltiptext4').removeClass('.active').toggle();
                     }                
                 });
+                $('.regform input[type="text"],.regform input[type="password"]').focusout(function(){
+                    if(!$(this).val()){
+                        $(this).addClass('.warning').css({"background":" #fff url(images/warning.png) no-repeat right 10px center","border-color":"red"});
+                    }else{
+                        $(this).removeClass('.warning').css({"background":"#fff","border-color":"#bdc7d8"});
+                    }
+                })
+                function checkValid(){
+                    var check=1;
+                    $('.regform input').each(function(){
+                    if($(this).val() == ''){
+                        this.focusin();
+                        check=0;
+                    }
+                    });
+                    if(check){
+                        return true;
+                    }else{
+                        return false;
+                    }
+                }
+                // $('.regbtn').onclick(function(){
+                    // $('.regform input').each(function(){
+                    // if($(this).val() == ''){
+                    //     this.focusin();
+                    //     return false;
+                    // }
+                    // });
+                // });
             });
         </script>
     </body>
