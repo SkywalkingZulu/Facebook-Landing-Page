@@ -336,50 +336,62 @@
                 })
                 //when user clicks on sign up
                 $('.regform').submit(function(event){
-                    event.preventDefault();
+                    // event.preventDefault();
                     var isFirstName=$('#firstname').val();
                     var isSurname=$('#surname').val();
                     var isContact=$('#contact').val();
                     var isPwd=$('#contact').val();
                     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
                     var phoneReg = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
-                    if(isPwd.length<6){
-                        $('#pwd').focusin();
-                        $('#contact').focusout();
+                    // var isValid=true;                  
+                    if(isFirstName.length < 1){
+                        $('#firstname').focusin();
                         $('#surname').focusout();
-                        $('#firstname').focusout();
+                        $('#contact').focusout();
+                        $('#pwd').focusout();
+                        return false;
+                    }
+                    if(isSurname.length < 1){
+                        $('#surname').focusin();
+                        $('#contact').focusout();
+                        $('#pwd').focusout();
+                        return false;
                     }
                     if(isContact.length < 1){
                         $('#contact').focusin();
                         $('#pwd').focusout();
                         $('#surname').focusout();
                         $('#firstname').focusout();
+                        return false;
                     }
-                    if(!emailReg.test(isContact) || !phoneReg.test(isContact)){
+                    if(!(emailReg.test(isContact) || !phoneReg.test(isContact))){
                         $('#tooltiptext3').html('Please enter a valid mobile number or email address.');
                         $('#contact').focusin();
                         $('#pwd').focusout();
                         $('#surname').focusout();
                         $('#firstname').focusout();
+                        return false;
                     }
-                    if(isSurname.length < 1){
-                        $('#surname').focusin();
+                    if(isPwd.length<6){
+                        $('#pwd').focusin();
                         $('#contact').focusout();
-                        $('#pwd').focusout();
-                    }
-                    if(isFirstName.length < 1){
-                        $('#firstname').focusin();
                         $('#surname').focusout();
-                        $('#contact').focusout();
-                        $('#pwd').focusout();
+                        $('#firstname').focusout();
+                        return false;
                     }
                     if(!$('#female').is(':checked') && !$('#male').is(':checked') && !$('#custom').is(':checked')){
                         $(".radiobtn_container").css({"border":"1px solid red","border-radius":"5px"}).addClass('.warning');
                         $(".gender_container").css({"background":"url(images/warning.png) no-repeat right 15px center"});
+                        return false;
                     }else{
                         $(".radiobtn_container").css("border","none").removeClass('.warning');
                         $(".gender_container").css("background","none");  
                     }
+                    // if(isValid){
+                    //     $('.regform').submit();
+                    // }else{
+                    //     event.preventDefault();
+                    // }
                 })
             });
         </script>
